@@ -112,9 +112,9 @@ public class AuthController {
                         break;
 
                     case "premium":
-                        Role modRole = roleRepository.findByName(ERole.ROLE_PREMIUM)
+                        Role premiumRole = roleRepository.findByName(ERole.ROLE_PREMIUM)
                                 .orElseThrow(() -> new RuntimeException("Erro: Role não encontrada"));
-                        roles.add(modRole);
+                        roles.add(premiumRole);
                         break;
 
                     case "user":
