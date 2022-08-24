@@ -9,7 +9,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "addresses")
 public class Address {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -24,21 +24,11 @@ public class Address {
     private String ddd;
     private String siafi;
 
-    public Address() {}
+    public Address() {
+    }
 
-    public Address(
-                String cep,
-                String logradouro,
-                String complemento,
-                String bairro,
-                String localidade,
-                String uf,
-                String ibge, 
-                String gia,
-                String ddd, 
-                String siafi
-            ) 
-    {
+    public Address(String cep, String logradouro, String complemento, String bairro, String localidade, String uf,
+            String ibge, String gia, String ddd, String siafi) {
         this.cep = cep;
         this.logradouro = logradouro;
         this.complemento = complemento;
@@ -49,6 +39,14 @@ public class Address {
         this.gia = gia;
         this.ddd = ddd;
         this.siafi = siafi;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getCep() {
@@ -132,4 +130,3 @@ public class Address {
     }
 
 }
-
